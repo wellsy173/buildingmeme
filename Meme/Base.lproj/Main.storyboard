@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Meme" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rDb-aG-XF4"/>
+                        <viewControllerLayoutGuide type="bottom" id="vmV-q1-Skj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3mo-MZ-Pwe" userLabel="textFieldTop">
+                                <rect key="frame" x="37" y="157" width="340" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="akp-JM-Upe">
+                                <rect key="frame" x="45" y="606" width="340" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ARN-Pu-S1U" userLabel="Nav Toolbar">
+                                <rect key="frame" x="14" y="34" width="386" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Share" image="square.and.arrow.up.fill" catalog="system" width="95" id="HVf-Uy-OEe">
+                                        <connections>
+                                            <action selector="shareImage:" destination="BYZ-38-t0r" id="UTk-w9-4RZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Cancel " width="326" id="Lbd-62-gc2" userLabel="cancelButton">
+                                        <connections>
+                                            <action selector="discardMeme:" destination="BYZ-38-t0r" id="An3-hH-7Dg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pencil.slash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7LB-cg-d4s">
+                                <rect key="frame" x="8" y="92" width="414" height="668"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" image="photo" catalog="system" id="YuL-FO-aBW" userLabel="photoAlbum">
+                            <connections>
+                                <action selector="pickAnImage:" destination="BYZ-38-t0r" id="qCw-fW-9VV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="Camera" width="522.66666666666663" id="db9-BM-cUO" userLabel="cameraButton">
+                            <connections>
+                                <action selector="pickAnImage:" destination="BYZ-38-t0r" id="bif-dU-rPP"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cameraButton" destination="db9-BM-cUO" id="b7t-Ut-GQc"/>
+                        <outlet property="cancelButton" destination="Lbd-62-gc2" id="PaR-1a-iMN"/>
+                        <outlet property="imagePickerView" destination="7LB-cg-d4s" id="O79-0X-2fl"/>
+                        <outlet property="shareButton" destination="HVf-Uy-OEe" id="Dme-ql-CX9"/>
+                        <outlet property="textFieldBottom" destination="akp-JM-Upe" id="LPE-7j-J8h"/>
+                        <outlet property="textFieldTop" destination="3mo-MZ-Pwe" id="mdC-TU-UWT"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="785.50724637681162" y="-308.70535714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pencil.slash" catalog="system" width="128" height="113"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
+    </resources>
+</document>
